@@ -24,7 +24,7 @@ How to Use
 
 Free version
 ```tex
-\usepackage{fontawesome5}
+\usepackage{fontawesome6}
 
 \faicon{font-awesome}
 Normal: \faicon{address-book}
@@ -33,10 +33,6 @@ Bold: \textbf{\faicon{address-book}}
 
 ```bash
 $ xelatex example-free.tex
-```
-
-```bash
-$ xelatex example-pro.tex
 ```
 
 Make Latest fontawesome.sty
