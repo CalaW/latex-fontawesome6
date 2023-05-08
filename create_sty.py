@@ -3,6 +3,7 @@
 
 import os
 import json
+from datetime import date
 
 # Download *-desktop.zip from https://github.com/FortAwesome/Font-Awesome/releases
 # and extract into fontawesome directory.
@@ -12,7 +13,7 @@ OUTPUT_FILE = os.path.join(SCRIPT_PATH, "fontawesome6.sty")
 
 OUTPUT_HEADER = r"""% Identify this package.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome6}[2023/02/11 v6.3.0 font awesome icons]
+\ProvidesPackage{fontawesome6}[""" + date.today().strftime("%Y/%m/%d") + r""" v6.4.0 font awesome icons]
 
 % Requirements to use.
 \RequirePackage{fontspec}
