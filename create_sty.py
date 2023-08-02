@@ -13,7 +13,7 @@ OUTPUT_FILE = os.path.join(SCRIPT_PATH, "fontawesome6.sty")
 
 OUTPUT_HEADER = r"""% Identify this package.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome6}[""" + date.today().strftime("%Y/%m/%d") + r""" v6.4.0 font awesome icons]
+\ProvidesPackage{fontawesome6}[""" + date.today().strftime("%Y/%m/%d") + r""" v6.4.2 font awesome icons]
 
 % Requirements to use.
 \RequirePackage{fontspec}
