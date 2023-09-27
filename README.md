@@ -40,7 +40,7 @@ Make Latest fontawesome.sty
 
 ### Requirements
 * You need python to create `fontawesome6.sty` from scratch.
-* Download FontAwesome from [here](https://fontawesome.com/ and exctact the zip file into `fontawesome` next to the `create_sty.py` file.
+* Download FontAwesome from [here](https://fontawesome.com) and exctact the zip file into `fontawesome` next to the `create_sty.py` file.
 
 ### Usage
 ```bash
