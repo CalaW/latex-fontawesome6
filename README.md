@@ -3,7 +3,7 @@ latex-fontawesome6
 
 Original project is [Jan-Hendrik Dolling's latex-fontawesome5](https://github.com/JanHendrikDolling/latex-fontawesome5) and [furl's latex-fontawesome](https://github.com/furl/latex-fontawesome). I edited this project to use latest [FontAwesome](https://fontawesome.com/) icons in XeLaTeX.
 
-The current version of FontAwesome icons used is 6.5.0.
+The current version of FontAwesome icons used is 6.5.1.
 
 How to Use
 ----------
