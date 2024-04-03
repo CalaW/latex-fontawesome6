@@ -11,9 +11,12 @@ SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 INPUT_FILE = os.path.join(SCRIPT_PATH, "fontawesome", "metadata", "icons.json")
 OUTPUT_FILE = os.path.join(SCRIPT_PATH, "fontawesome6.sty")
 
-OUTPUT_HEADER = r"""% Identify this package.
+OUTPUT_HEADER = (
+    R"""% Identify this package.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome6}[""" + date.today().strftime("%Y/%m/%d") + r""" v6.4.2 font awesome icons]
+\ProvidesPackage{fontawesome6}["""
+    + date.today().strftime("%Y/%m/%d")
+    + R""" v6.5.2 font awesome icons]
 
 % Requirements to use.
 \RequirePackage{fontspec}
@@ -33,9 +36,10 @@ OUTPUT_HEADER = r"""% Identify this package.
 }}
 
 """
+)
 
 OUTPUT_LINE = (
-    '\expandafter\def\csname faicon@%(name)s\endcsname {%(font)s\symbol{"%(symbol)s}}\n'
+    R'\expandafter\def\csname faicon@%(name)s\endcsname {%(font)s\symbol{"%(symbol)s}}' + "\n"
 )
 
 
@@ -45,11 +49,7 @@ def main():
         with open(OUTPUT_FILE, "w") as w:
             w.write(OUTPUT_HEADER)
             for icon_name in sorted(icons.keys()):
-                font = (
-                    r"\FA"
-                    if "brands" not in icons[icon_name]["styles"]
-                    else r"\FABrands"
-                )
+                font = R"\FA" if "brands" not in icons[icon_name]["styles"] else R"\FABrands"
                 w.write(
                     OUTPUT_LINE
                     % {
