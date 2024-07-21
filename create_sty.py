@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-import os
 import json
+import os
 from datetime import date
 
 # Download *-desktop.zip from https://github.com/FortAwesome/Font-Awesome/releases
@@ -16,7 +15,7 @@ OUTPUT_HEADER = (
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{fontawesome6}["""
     + date.today().strftime("%Y/%m/%d")
-    + R""" v6.5.2 font awesome icons]
+    + R""" v6.6.0 font awesome icons]
 
 % Requirements to use.
 \RequirePackage{fontspec}
@@ -44,7 +43,7 @@ OUTPUT_LINE = (
 
 
 def main():
-    with open(INPUT_FILE, "r") as json_data:
+    with open(INPUT_FILE) as json_data:
         icons = json.load(json_data)
         with open(OUTPUT_FILE, "w") as w:
             w.write(OUTPUT_HEADER)
