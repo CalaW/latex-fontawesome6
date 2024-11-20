@@ -15,7 +15,7 @@ OUTPUT_HEADER = (
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{fontawesome6}["""
     + date.today().strftime("%Y/%m/%d")
-    + R""" v6.6.0 font awesome icons]
+    + R""" v6.7.0 font awesome icons]
 
 % Requirements to use.
 \RequirePackage{fontspec}
